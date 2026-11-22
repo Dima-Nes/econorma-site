@@ -1,0 +1,62 @@
+/* v13 – подвал: ссылки слева, nestudio справа; 100 объектов; кнопка «Справка исполнителя» */
+
+/* Подвал: общий контейнер – два блока через space-between */
+.site-footer .footer-inner {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 16px 32px;
+}
+
+/* Левая часть с юр.инфо, лого и ссылками */
+.footer-legal-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Ссылки: «Политика» и «Согласие» – столбец слева */
+.footer-links {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 5px !important;
+}
+
+.footer-links a {
+  font-size: 13.5px !important;
+  color: var(--ink-on-dark-secondary) !important;
+  text-decoration: none !important;
+}
+
+.footer-links a:hover {
+  color: var(--ink-on-dark) !important;
+  text-decoration: underline !important;
+}
+
+/* Правая часть: кредит nestudio – прибит к правому краю, вертикально по центру */
+.footer-right {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-left: auto !important;
+  flex: none !important;
+  padding-top: 36px;
+}
+
+/* Мобильная версия: всё в столбик по левому краю */
+@media (max-width: 992px) {
+  .site-footer .footer-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+
+  .footer-right {
+    margin-left: 0 !important;
+    padding-top: 0;
+  }
+}

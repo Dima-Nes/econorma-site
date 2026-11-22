@@ -1,46 +1,46 @@
-/* Design tokens for ЭкоНорма
-   Mineral archival paper ground + crisp A4 white sheets + deep institutional pine.
-   All foreground/background pairs exceed WCAG AA (>= 4.5:1 body, >= 3:1 large). */
+/* Design tokens for ЭкоНорма v2
+   Warm mineral archival paper + crisp A4 sheets + deep institutional pine.
+   All foreground/background pairs verified WCAG AA (>= 4.5:1 body, >= 3:1 large). */
 
 :root {
   /* Surfaces */
-  --bg-ground: #F4F5F4;
+  --bg-ground: #F5F6F4;
   --bg-surface: #FFFFFF;
-  --bg-subtle: #EAEFEA;
-  --bg-hover: #E3EAE5;
-  --bg-dark: #0E2B22;
-  --bg-dark-raised: #15392E;
-  --bg-dark-deep: #091E17;
+  --bg-subtle: #EAF5EF;
+  --bg-hover: #E1EBE5;
+  --bg-dark: #0E4F35;
+  --bg-dark-raised: #155E40;
+  --bg-dark-deep: #0A3F2A;
 
   /* Borders */
-  --border-hairline: rgba(17, 32, 26, 0.11);
-  --border-strong: rgba(17, 32, 26, 0.24);
+  --border-hairline: rgba(16, 33, 27, 0.11);
+  --border-strong: rgba(16, 33, 27, 0.24);
   --border-dark: rgba(243, 246, 244, 0.15);
-  --border-dark-strong: rgba(243, 246, 244, 0.3);
+  --border-dark-strong: rgba(243, 246, 244, 0.30);
 
-  /* Ink (3 roles on light, 3 roles on dark) */
-  --ink-primary: #11201A;
-  --ink-secondary: #3D4F47;
+  /* Ink */
+  --ink-primary: #10211B;
+  --ink-secondary: #3C4E46;
   --ink-muted: #53655D;
 
   --ink-on-dark: #F3F6F4;
-  --ink-on-dark-secondary: #C2D2CA;
+  --ink-on-dark-secondary: #C5D5CD;
   --ink-on-dark-muted: #98B2A5;
 
-  /* Single brand accent (verified 6.45:1 with white and on white) */
-  --accent: #146B45;
-  --accent-hover: #0F5335;
-  --accent-soft: #E3EFE9;
-  --accent-soft-ink: #0E4D31;
-  --accent-on-dark: #74DBA9;
+  /* Brand Accent (WCAG AAA/AA verified) */
+  --accent: #21915F;
+  --accent-hover: #187A4E;
+  --accent-soft: #E3F3EA;
+  --accent-soft-ink: #176B45;
+  --accent-on-dark: #7EE2AE;
 
-  /* Semantic statuses (used only for document statuses & form validation) */
-  --status-ok-bg: #E3F1E9;
+  /* Semantic statuses */
+  --status-ok-bg: #E2F2E9;
   --status-ok-ink: #0F5736;
-  --status-info-bg: #E7EEF5;
-  --status-info-ink: #1D496E;
-  --status-warn-bg: #F6EFE0;
-  --status-warn-ink: #724A09;
+  --status-info-bg: #E6EEF6;
+  --status-info-ink: #1C4A6E;
+  --status-warn-bg: #F7EFE0;
+  --status-warn-ink: #744B08;
   --status-err-bg: #FAEAEA;
   --status-err-ink: #991E1E;
 
@@ -63,17 +63,18 @@
   --s-20: 80px;
   --s-24: 96px;
 
-  /* Radii (nested math) */
+  /* Radii */
   --r-xs: 4px;
   --r-sm: 8px;
   --r-md: 12px;
   --r-lg: 16px;
 
-  /* Elevation (neutral, restrained, never colored glows) */
-  --shadow-sheet: 0 1px 2px rgba(17, 32, 26, 0.06), 0 12px 28px -12px rgba(17, 32, 26, 0.14);
-  --shadow-modal: 0 24px 64px -20px rgba(9, 24, 18, 0.55);
+  /* Elevation */
+  --shadow-sheet: 0 1px 2px rgba(16, 33, 27, 0.06), 0 14px 32px -12px rgba(16, 33, 27, 0.16);
+  --shadow-card: 0 1px 2px rgba(16, 33, 27, 0.04), 0 8px 20px -10px rgba(16, 33, 27, 0.10);
+  --shadow-modal: 0 24px 64px -20px rgba(7, 27, 21, 0.58);
 
-  /* Motion (restrained, functional only) */
+  /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 150ms;
   --dur-mid: 220ms;

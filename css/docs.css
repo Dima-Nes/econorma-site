@@ -248,7 +248,10 @@
     display: block;
   }
 
-  .modal-bar {
+  .modal-bar,
+  .modal-mobile-bar,
+  .mobile-dock,
+  .status-live {
     display: none !important;
   }
 

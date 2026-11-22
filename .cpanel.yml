@@ -3,5 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=$HOME/public_html/
     - /bin/mkdir -p $DEPLOYPATH
-    - /bin/cp -f index.html politika.html soglasie.html 404.html .htaccess $DEPLOYPATH
+    - /bin/cp -f index.html politika.html soglasie.html 404.html robots.txt sitemap.xml .htaccess $DEPLOYPATH
     - /bin/cp -R css js assets $DEPLOYPATH

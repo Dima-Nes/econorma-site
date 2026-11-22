@@ -1,0 +1,78 @@
+/* ЭкоНорма v6 – фирменный знак, иконки, живой зелёный. Подключается последним. */
+
+/* Brand: крупный знак-скрепка + подпись */
+.brand { gap: 12px; }
+.brand-mark { width: 46px; height: 46px; color: var(--accent); }
+.brand-text { display: flex; flex-direction: column; gap: 4px; }
+.brand-wordmark { font-size: 25px; letter-spacing: -0.03em; }
+.brand-eco { font-weight: 700; color: var(--accent); }
+.brand-norma { font-weight: 700; color: var(--ink-primary); }
+.brand-tag { font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-muted); line-height: 1; white-space: nowrap; }
+.site-footer .brand-mark { width: 40px; height: 40px; }
+
+/* Icon boxes */
+.ix { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); flex: none; transition: background-color var(--dur-mid) var(--ease), color var(--dur-mid) var(--ease); }
+.ix .icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.ix-sm { width: 38px; height: 38px; border-radius: 10px; }
+.ix-sm .icon { width: 21px; height: 21px; }
+.ix-lg { width: 54px; height: 54px; border-radius: 14px; }
+.ix-lg .icon { width: 29px; height: 29px; }
+.ix-xl { width: 62px; height: 62px; border-radius: 16px; margin-top: var(--s-4); }
+.ix-xl .icon { width: 33px; height: 33px; }
+.ix-step { width: 60px; height: 60px; border-radius: 16px; background: rgba(255,255,255,.1); color: var(--accent-on-dark); margin: var(--s-3) 0; }
+.ix-step .icon { width: 32px; height: 32px; stroke-width: 1.6; }
+.ix-tile { width: 64px; height: 64px; border-radius: 18px; }
+.ix-tile .icon { width: 34px; height: 34px; stroke-width: 1.6; }
+
+/* hover: icon fills with accent */
+.flagship:hover .ix, .service-row:hover .ix, .risk-item:hover .ix, .principles-list li:hover .ix, .waste-tile:hover .ix, .hero-fact:hover .ix { background: var(--accent); color: #fff; }
+.process-step:hover .ix-step { background: var(--accent); color: #fff; }
+
+/* placements */
+.hero-fact .ix { margin-bottom: 8px; }
+.risk-item .ix { margin-bottom: var(--s-4); }
+.service-row h3 { display: flex; align-items: center; gap: 14px; }
+.flagship { border-width: 2px; transition: border-color var(--dur-mid) var(--ease), transform var(--dur-mid) var(--ease), box-shadow var(--dur-mid) var(--ease); }
+.flagship:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 26px 50px -30px rgba(33,145,95,.6); }
+.principles-list li { display: grid; grid-template-columns: auto 1fr; column-gap: 18px; align-items: start; }
+.principles-list li .ix { grid-row: span 2; }
+.principles-list li > :not(.ix) { grid-column: 2; }
+.law-item { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; }
+.law-item .ix { grid-row: span 2; }
+.law-item > :not(.ix) { grid-column: 2; }
+
+/* waste tiles */
+.waste-tiles { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; margin: var(--s-8) 0 var(--s-8); }
+.waste-tile { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: center; background: var(--bg-surface); border: 2px solid var(--border-hairline); border-radius: var(--r-lg); padding: 18px; transition: border-color var(--dur-mid) var(--ease), transform var(--dur-mid) var(--ease), background-color var(--dur-mid) var(--ease); }
+.waste-tile .ix { grid-row: span 2; }
+.waste-tile b { font-size: 18px; font-weight: 600; color: var(--ink-primary); line-height: 1.2; }
+.waste-tile small { font-size: 14px; color: var(--ink-muted); }
+.waste-tile:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-3px); }
+
+/* team seal with brand mark */
+.specialist-seal { position: relative; overflow: hidden; background: linear-gradient(150deg, var(--bg-dark), var(--accent)) !important; color: #fff !important; }
+.specialist-seal svg { position: absolute; width: 70%; right: -18%; bottom: -22%; color: #fff; opacity: .2; }
+
+/* Dark sections: живой изумрудный градиент + водяной знак скрепки */
+.section-dark { position: relative; overflow: hidden; background: radial-gradient(1200px 500px at 85% -10%, rgba(126,226,174,.18), transparent 60%), linear-gradient(135deg, #0E4F35 0%, #13683F 55%, #1A7F50 100%); }
+.section-dark::after { content: ""; position: absolute; right: -90px; bottom: -110px; width: 460px; height: 460px; background: url(../assets/img/mark-white.svg) center / contain no-repeat; opacity: .07; pointer-events: none; }
+.section-dark > .wrap { position: relative; z-index: 1; }
+
+/* mobile overflow guard: grid children must be able to shrink */
+.hero-grid > *, .checker > *, .tender-grid > *, .faq-grid > *, .contact-grid > * { min-width: 0; }
+.dossier-tabs { overflow-x: auto; scrollbar-width: none; }
+.dossier-tabs::-webkit-scrollbar { display: none; }
+.dossier-tab { white-space: nowrap; flex: none; }
+
+@media (max-width: 1024px) {
+  .waste-tiles { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .brand-mark { width: 38px; height: 38px; }
+  .brand-wordmark { font-size: 21px; }
+  .brand-tag { font-size: 9.5px; letter-spacing: .1em; }
+  .waste-tile { grid-template-columns: 1fr; text-align: center; justify-items: center; row-gap: 6px; padding: 16px 10px; }
+  .waste-tile .ix { grid-row: auto; }
+  .waste-tile b { font-size: 16px; }
+  .ix-xl { width: 54px; height: 54px; }
+}

@@ -1,15 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#F4F5F4"/>
-  <rect x="0" y="0" width="1200" height="10" fill="#146B45"/>
+  <rect width="1200" height="630" fill="#F5F6F4"/>
+  <rect x="0" y="0" width="1200" height="10" fill="#136843"/>
   <rect x="64" y="56" width="1072" height="518" rx="16" fill="#FFFFFF" stroke="#D8DFDB" stroke-width="2"/>
-  <g transform="translate(112, 108) scale(0.16)">
-    <path d="M22 232C14 110 130 28 378 22C382 230 318 372 168 372C152 372 146 362 156 352L296 206A52 52 0 0 0 222 132L40 322A34 34 0 0 0 88 370L248 202A18 18 0 0 0 222 176L92 312" fill="none" stroke="#146B45" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(112, 106) scale(1.6)">
+    <path d="M8 28V12.5C8 8.91 10.91 6 14.5 6H29V18.5C29 24.85 23.85 30 17.5 30H12.5C10.01 30 8 27.99 8 25.5V16.5C8 14.01 10.01 12 12.5 12H21.5" fill="none" stroke="#136843" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.5 18.5L17.5 21.5L24.5 14.5" fill="none" stroke="#136843" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <text x="196" y="152" font-family="Helvetica Neue, Arial, sans-serif" font-size="38" font-weight="600" fill="#146B45">Эко<tspan fill="#11201A">Норма</tspan></text>
-  <text x="112" y="268" font-family="Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="600" fill="#11201A">Инструкции по обращению</text>
-  <text x="112" y="332" font-family="Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="600" fill="#11201A">с отходами в Беларуси</text>
-  <text x="112" y="402" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#3D4F47">Обследование, инвентаризация, нормативы и учёт ПОД-9/ПОД-10</text>
-  <text x="112" y="438" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#3D4F47">для школ, детских садов, поликлиник и предприятий РБ</text>
-  <line x1="112" y1="486" x2="1088" y2="486" stroke="#E2E7E4" stroke-width="2"/>
-  <text x="112" y="532" font-family="Menlo, monospace" font-size="20" fill="#146B45">econorma.by · Закон № 271-З · goszakupki.by / icetrade.by</text>
+  <text x="184" y="148" font-family="Helvetica Neue, Arial, sans-serif" font-size="38" font-weight="500" fill="#136843">Эко<tspan font-weight="600" fill="#10211B">Норма</tspan></text>
+  <text x="112" y="264" font-family="Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="600" fill="#10211B">Инструкции по обращению</text>
+  <text x="112" y="328" font-family="Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="600" fill="#10211B">с отходами в Беларуси</text>
+  <text x="112" y="398" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#3C4E46">Обследование, инвентаризация, нормативы и учёт ПОД-9/ПОД-10</text>
+  <text x="112" y="434" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#3C4E46">для школ, детских садов, поликлиник, центров обеспечения и предприятий РБ</text>
+  <line x1="112" y1="484" x2="1088" y2="484" stroke="#E2E7E4" stroke-width="2"/>
+  <text x="112" y="530" font-family="Menlo, monospace" font-size="20" fill="#136843">econorma.by · Закон № 271-З · goszakupki.by / icetrade.by</text>
 </svg>

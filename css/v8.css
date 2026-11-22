@@ -1,0 +1,83 @@
+/* ЭкоНорма v8 – аудит Impeccable + CRO.
+   Иконка рядом с заголовком, без надзаголовков, контраст AA, тема браузерных поверхностей, один авторский момент движения. */
+
+:root { --accent-ink: #1A7A4F; } /* тот же зелёный, чуть темнее – только для мелкого текста, 5,1:1 на белом */
+
+/* Browser surfaces */
+::selection { background: #CDEBDA; color: #0B2E21; }
+html { scrollbar-color: #9CCBB2 transparent; accent-color: var(--accent); caret-color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+a { text-underline-offset: 3px; }
+.tnum, .board-table, .classifier-table, .requisites-list .mono { font-variant-numeric: tabular-nums; }
+
+/* Contrast: small green text */
+.text-link, .lead-form a, .faq-answer a, .form-consent a, .docs-disclaimer a, .flagship-tag { color: var(--accent-ink); }
+.text-link:hover { color: #0E4F35; }
+.header-phone:hover, .role-pill:hover, .waste-code-btn:hover, .faq-contacts a:hover, .faq-item summary:hover, .main-nav a:hover, .main-nav a.active, .main-nav a[aria-current] { color: var(--accent-ink); }
+
+/* Monospace only for codes and numbers, not as a costume */
+.risk-code, .flagship-term, .board-demo-tag, .zavhoz-progress-label { font-family: var(--font-sans); letter-spacing: 0; }
+
+/* Icon beside heading, not stacked above it */
+.head-row { display: flex; align-items: center; gap: 16px; margin-top: var(--s-4); }
+.head-row .ix-xl { margin-top: 0; width: 56px; height: 56px; }
+.head-row h3 { margin-top: 0 !important; }
+
+.hero-fact { display: flex; align-items: flex-start; gap: 12px; }
+.hero-fact .ix { margin-bottom: 0; width: 32px; height: 32px; border-radius: 9px; }
+.hero-fact .ix .icon { width: 18px; height: 18px; }
+.hero-facts { column-gap: 18px; }
+.hero-fact dt { font-size: 15px; font-weight: 600; }
+.hero-fact dd { font-size: 14px; }
+
+.risk-item { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: start; }
+.risk-item .ix { grid-row: span 3; margin-bottom: 0; }
+.risk-item > :not(.ix) { grid-column: 2; }
+.risk-code { font-size: 13px; font-weight: 600; color: var(--accent-ink); margin-bottom: 4px; }
+
+.process-step { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; row-gap: 8px; align-items: center; }
+.process-num { display: none; }
+.process-step .ix-step { margin: 0; width: 52px; height: 52px; }
+.process-step .ix-step .icon { width: 28px; height: 28px; }
+.process-step p { grid-column: 1 / -1; }
+/* Порядок шагов – тонкая линия между иконками, а не номера */
+.process-grid { counter-reset: none; position: relative; }
+.process-step:not(:last-child)::after { content: ""; display: block; grid-column: 1 / -1; grid-row: 1; justify-self: end; align-self: center; width: calc(100% - 66px); height: 1px; background: linear-gradient(90deg, rgba(126,226,174,.5), transparent); margin-right: -24px; pointer-events: none; }
+.process-step h3 { grid-column: 2; grid-row: 1; position: relative; z-index: 1; }
+.process-step .ix-step { grid-column: 1; grid-row: 1; }
+
+/* Side-tab ban: full tint, no one-sided bar */
+.risk-callout { border-left: 0; border: 1px solid #CFE6D9; border-radius: 14px; }
+
+/* One elevation per card, radii 12–16 */
+.aud-card { border-radius: 16px; }
+.aud-card:hover, .flagship:hover, .waste-tile:hover { box-shadow: none; }
+.aud-img { border-radius: 12px; }
+.get-img, .hero-art img:first-child { border-radius: 16px; }
+
+/* Objection handling at the form */
+.assure { list-style: none; display: grid; gap: 14px; margin: var(--s-6) 0 var(--s-8); }
+.assure li { display: flex; gap: 14px; align-items: flex-start; }
+.assure .ix { background: rgba(255,255,255,.1); color: var(--accent-on-dark); }
+.assure b { display: block; font-size: 17px; font-weight: 600; color: var(--ink-on-dark); }
+.assure span { font-size: 15px; color: var(--ink-on-dark-secondary); }
+
+/* Hero: one quiet choice less – «Для кого» ниже делает то же самое */
+.role-router { display: none; }
+.hero-lead { max-width: 34em; }
+
+/* One authored motion moment: the hero illustration settles in, stamp lands */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-art img:first-child { animation: art-in 1.1s cubic-bezier(.16,1,.3,1) both; }
+  .hero-art-stamp { animation: stamp-in .7s cubic-bezier(.16,1,.3,1) .7s both; }
+}
+@keyframes art-in { from { opacity: .001; transform: translateY(18px) scale(.985); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes stamp-in { from { opacity: 0; transform: rotate(-30deg) scale(1.6); } to { opacity: 1; transform: rotate(-12deg) scale(1); } }
+
+@media (max-width: 1024px) {
+  .process-step:not(:last-child)::after { display: none; }
+}
+@media (max-width: 640px) {
+  .risk-item .ix { grid-row: span 3; }
+  .head-row .ix-xl { width: 48px; height: 48px; }
+}

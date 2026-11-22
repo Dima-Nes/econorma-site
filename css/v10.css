@@ -1,0 +1,13 @@
+/* v10 – крупная иллюстрация (фон вырезан, штамп впечатан в файл) с реакцией на курсор */
+@media (min-width: 1025px) {
+  .hero-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important; gap: 40px !important; align-items: center; }
+}
+.hero-copy { position: relative; z-index: 3; }
+.hero-art { position: relative; z-index: 1; display: flex; justify-content: center; align-items: center; }
+.hero-art .hero-art-stamp { display: none !important; }
+.hero-art .hero-main { width: 100% !important; max-width: 640px !important; height: auto; margin: 0 auto !important; border-radius: 0 !important;
+  mix-blend-mode: normal !important; -webkit-mask-image: none !important; mask-image: none !important; filter: drop-shadow(0 30px 40px rgba(14,79,53,.10));
+  will-change: transform; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.hero-art.tilting .hero-main { transition-duration: .15s; }
+@media (max-width: 1024px) { .hero-art .hero-main { max-width: 560px !important; } }
+@media (max-width: 640px) { .hero-art .hero-main { max-width: 100% !important; } }

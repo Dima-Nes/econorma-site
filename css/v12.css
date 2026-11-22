@@ -1,0 +1,206 @@
+/* v12 – мобильный виджет, компактная кнопка расчёта, единая строка подвала, фото инженеров */
+
+/* 1. Кнопка «Получить расчёт» в герое – лаконичная, строго в один ряд на десктопе */
+.hero-actions .btn {
+  white-space: nowrap !important;
+  min-height: 48px;
+}
+
+/* 2. Мобильная версия: убираем нижние кнопки «Позвонить» и «Запросить КП» */
+.mobile-dock {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 0 !important;
+  }
+  .status-live {
+    bottom: 20px !important;
+  }
+}
+
+/* 3. Плавающий виджет: опускаем в нижнее положение с равномерными отступами от нижнего и бокового края */
+@media (max-width: 900px) {
+  .contact-fab {
+    right: 20px !important;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .fab {
+    width: 58px !important;
+    height: 58px !important;
+  }
+}
+
+/* 4. Фотографии специалистов: лаконично и гармонично */
+.specialist-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-sm);
+  aspect-ratio: 1 / 1;
+  background-color: var(--bg-ground);
+  border: 1px solid var(--border-hairline);
+  margin-bottom: var(--s-4);
+}
+
+.specialist-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform var(--dur-mid) var(--ease);
+}
+
+.specialist:hover .specialist-photo {
+  transform: scale(1.03);
+}
+
+.specialist-media .specialist-seal {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-primary);
+  border-radius: 50%;
+}
+
+.specialist-media .specialist-seal svg {
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+}
+
+.specialist-media .specialist-exp {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(7, 27, 21, 0.82);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  z-index: 2;
+}
+
+.specialist h3 {
+  margin-top: 0 !important;
+}
+
+/* 5. Подвал: плашка «Разработка сайта: nestudio» в один ряд с политикой и согласием по правому краю */
+.site-footer .footer-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-block: var(--s-8);
+}
+
+.footer-legal-copy {
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  flex-wrap: wrap;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--ink-on-dark-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.footer-links a:hover {
+  color: var(--ink-on-dark);
+  text-decoration: underline;
+}
+
+.dev-row {
+  display: none !important;
+}
+
+.footer-right .dev-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a7f3d0;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 4px 12px 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  transition: border-color .2s, background .2s, color .2s;
+  line-height: 1.2;
+  flex: none;
+}
+
+.footer-right .dev-credit:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.footer-right .dev-credit .ns-mark {
+  width: 20px;
+  height: 21px;
+  flex: none;
+  color: inherit;
+  display: block;
+}
+
+.footer-right .dev-credit b {
+  font-weight: 600;
+  font-size: 1.15em;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .site-footer .footer-inner {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+  .footer-right {
+    margin-left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
