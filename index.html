@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЭкоНорма — разработка инструкций по обращению с отходами в Беларуси</title>
+  <meta name="description" content="Инструкции по обращению с отходами производства, инвентаризация, нормативы и учёт ПОД-9/ПОД-10 для школ, детских садов, поликлиник и предприятий Республики Беларусь. Образцы документов и самопроверка онлайн.">
+  <meta name="theme-color" content="#F4F5F4">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="ЭкоНорма — экологическая документация по отходам для организаций Беларуси">
+  <meta property="og:description" content="Разработка и продление инструкций по обращению с отходами, инвентаризация, нормативы и пакетное сопровождение учреждений района.">
+  <meta property="og:image" content="assets/img/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/stamp.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/docs.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- Uniform 1.5px line icon sprite + authentic ЭкоНорма paperclip-leaf mark -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="econorma-mark" viewBox="0 0 400 400">
+      <path d="M22 232C14 110 130 28 378 22C382 230 318 372 168 372C152 372 146 362 156 352L296 206A52 52 0 0 0 222 132L40 322A34 34 0 0 0 88 370L248 202A18 18 0 0 0 222 176L92 312"/>
+    </symbol>
+    <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="ic-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="ic-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="ic-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="ic-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="ic-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></symbol>
+    <symbol id="ic-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="ic-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h4"/></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="ЭкоНорма — на главную" translate="no">
+        <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true"><use href="#econorma-mark"/></svg>
+        <span class="brand-wordmark"><span>Эко</span>Норма</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#docs">Образцы</a>
+        <a href="#process">Порядок работ</a>
+        <a href="#prices">Цены</a>
+        <a href="#tender">Для комиссий</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+375447138869">
+          <svg class="icon" aria-hidden="true"><use href="#ic-phone"/></svg>
+          <span>+375 44 713-88-69</span>
+        </a>
+        <a class="btn btn-primary header-cta" href="#contact">Запросить КП</a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg class="icon" aria-hidden="true"><use href="#ic-menu"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-drawer" id="mobileDrawer" aria-label="Мобильное меню">
+      <div class="mobile-drawer-links">
+        <a href="#services">Услуги</a>
+        <a href="#docs">Образцы документов</a>
+        <a href="#process">Порядок работ</a>
+        <a href="#check">Самопроверка</a>
+        <a href="#prices">Цены</a>
+        <a href="#tender">Для комиссий</a>
+        <a href="#faq">Частые вопросы</a>
+      </div>
+      <div class="mobile-drawer-footer">
+        <a class="btn btn-primary" href="#contact">Запросить КП</a>
+        <a class="btn btn-secondary tnum" href="tel:+375447138869">+375 44 713-88-69</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-heading">Разработка инструкций по обращению с отходами в Беларуси</h1>
+          <p class="hero-lead">Обследуем объект, проводим инвентаризацию, рассчитываем нормативы и готовим полный пакет документов с подписью инженера-эколога — для школ, детских садов, поликлиник, центров обеспечения и предприятий.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#docs">Смотреть образцы документов</a>
+            <a class="btn btn-secondary" href="#check">Проверить, нужна ли инструкция</a>
+          </div>
+
+          <dl class="hero-facts">
+            <div class="hero-fact">
+              <dt>ЭТП с ЭЦП</dt>
+              <dd>Работаем на goszakupki.by и icetrade.by</dd>
+            </div>
+            <div class="hero-fact">
+              <dt>Закон № 271-З</dt>
+              <dd>Подпись инженера-эколога и бесплатное устранение замечаний</dd>
+            </div>
+            <div class="hero-fact">
+              <dt>Вся Беларусь</dt>
+              <dd>Выезд на объекты и пакеты для учреждений района</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="dossier" aria-label="Предпросмотр образцов документации">
+          <div class="dossier-tabs" id="heroTabs" role="tablist" aria-label="Выбор образца документа"></div>
+          <div class="dossier-stage" id="heroStage" role="button" tabindex="0" aria-label="Открыть образец документа целиком">
+            <div class="dossier-scale" id="heroScale"></div>
+            <img class="dossier-stamp" src="assets/img/stamp.png" alt="Штамп «ЭкоНорма — проверено экологами»" width="112" height="112" fetchpriority="high">
+          </div>
+          <div class="dossier-bar">
+            <span id="heroDocCaption">Демонстрационный образец · Школа</span>
+            <button type="button" class="dossier-open" id="heroOpenDoc">Открыть целиком →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGULATORY BASIS -->
+    <section class="section section-white" aria-labelledby="why-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="why-heading">Без утверждённой инструкции ответственность лежит на руководителе</h2>
+            <p class="section-lead">Любая организация, у которой образуются отходы производства — ртутные лампы, оргтехника, отходы пищеблока, смёт с территории — считается природопользователем.</p>
+          </div>
+        </div>
+
+        <div class="risk-strip">
+          <article class="risk-item">
+            <div class="risk-code">Закон № 271-З</div>
+            <h3>Плановые и внеплановые проверки</h3>
+            <p>Природоохранные органы проверяют наличие утверждённой инструкции, книг учёта ПОД-9 и ПОД-10, приказов о назначении ответственных и договоров на передачу отходов.</p>
+          </article>
+          <article class="risk-item">
+            <div class="risk-code">КоАП РБ</div>
+            <h3>Ответственность организации и должностных лиц</h3>
+            <p>За отсутствие инструкции, несоблюдение правил раздельного сбора или учёта отходов предусмотрены административные штрафы для юридического лица и руководителя.</p>
+          </article>
+          <article class="risk-item">
+            <div class="risk-code">Цикл 5 лет</div>
+            <h3>Документы 2021–2022 годов истекают</h3>
+            <p>Срок действия инструкции — пять лет. Если ваш пакет утверждён в 2021 или 2022 году, обновление необходимо заложить в график и план закупок заранее.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="services-heading">Услуги по обращению с отходами</h2>
+            <p class="section-lead">Готовим полный пакет документации на один объект или ведём сразу все бюджетные учреждения района по единому графику.</p>
+          </div>
+          <p class="section-aside-note">Работаем по прямым договорам и в процедурах госзакупок на ЭТП</p>
+        </div>
+
+        <div class="flagships">
+          <article class="flagship flagship-accent">
+            <div class="flagship-head">
+              <span class="flagship-tag">Основная услуга</span>
+              <span class="flagship-term">от 5 рабочих дней</span>
+            </div>
+            <h3>Разработка и продление инструкции</h3>
+            <p class="flagship-desc">Полный пакет документов природопользователя сроком действия на 5 лет с обследованием объекта и подписью разработчика.</p>
+            <ul class="flagship-list">
+              <li>Выезд и обследование объекта</li>
+              <li>Инвентаризация и коды отходов</li>
+              <li>Расчёт годовых нормативов</li>
+              <li>Карта-схема мест хранения</li>
+              <li>Проекты приказов и порядок учёта</li>
+              <li>Подпись инженера-эколога</li>
+            </ul>
+            <div class="flagship-foot">
+              <span class="flagship-price">от 450 BYN</span>
+              <button type="button" class="text-link" data-open-doc="school">Посмотреть образец инструкции →</button>
+            </div>
+          </article>
+
+          <article class="flagship">
+            <div class="flagship-head">
+              <span class="flagship-tag">Для центров обеспечения</span>
+              <span class="flagship-term">по согласованному графику</span>
+            </div>
+            <h3>Пакет для всех учреждений района</h3>
+            <p class="flagship-desc">Организуем сбор данных, обследование и выпуск документации сразу для десятков школ, детских садов и учреждений культуры.</p>
+            <ul class="flagship-list">
+              <li>Единый договор и план-график</li>
+              <li>Отдельный пакет на каждый объект</li>
+              <li>Сводный реестр статусов онлайн</li>
+              <li>Работа с завхозами по чек-листу</li>
+              <li>Поэтапная сдача партиями</li>
+              <li>Поэтапное подписание актов</li>
+            </ul>
+            <div class="flagship-foot">
+              <span class="flagship-price">по расчёту за объект</span>
+              <button type="button" class="text-link" data-open-doc="center">Посмотреть реестр на 77 объектов →</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="service-ledger" aria-label="Дополнительные услуги">
+          <div class="service-row">
+            <h3>Инвентаризация отходов</h3>
+            <p>Выезд на объект, определение перечня, кодов и классов опасности при изменении состава или объёмов отходов, акт с рекомендациями.</p>
+            <div class="service-meta">от 150 BYN<small>от 2 рабочих дней</small></div>
+            <button type="button" class="text-link" data-prefill-count="1 объект" data-prefill-msg="Инвентаризация отходов производства">Запросить →</button>
+          </div>
+          <div class="service-row">
+            <h3>Нормативы образования отходов</h3>
+            <p>Расчётно-аналитический расчёт годовых объёмов по методикам и данным учёта, сводная таблица нормативов и обоснование для органов.</p>
+            <div class="service-meta">по расчёту<small>от 3 рабочих дней</small></div>
+            <button type="button" class="text-link" data-prefill-count="1 объект" data-prefill-msg="Расчёт нормативов образования отходов">Запросить →</button>
+          </div>
+          <div class="service-row">
+            <h3>Учёт отходов ПОД-9 и ПОД-10</h3>
+            <p>Настройка книг учёта и образцы заполнения, проекты приказов об ответственных; статистическая отчётность «1-отходы» — для предприятий.</p>
+            <div class="service-meta">от 100 BYN<small>от 1 рабочего дня</small></div>
+            <button type="button" class="text-link" data-prefill-count="1 объект" data-prefill-msg="Настройка учёта отходов ПОД-9 и ПОД-10">Запросить →</button>
+          </div>
+          <div class="service-row">
+            <h3>Экосопровождение (абонемент)</h3>
+            <p>Для организаций без штатного эколога: календарь сроков, ведение книг ПОД, ответы на запросы органов, подготовка к проверкам и консультации.</p>
+            <div class="service-meta">от 120 BYN/мес.<small>3 тарифа на выбор</small></div>
+            <button type="button" class="text-link" data-prefill-count="1 объект" data-prefill-msg="Экосопровождение (абонемент)">Запросить →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENT SAMPLES -->
+    <section class="section section-white" id="docs" aria-labelledby="docs-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="docs-heading">Образцы документов</h2>
+            <p class="section-lead">Оцените структуру, таблицы классификатора, расчёты, карту-схему и оформление подписей до заключения договора. Нажмите на любой бланк — документ откроется целиком с возможностью печати.</p>
+          </div>
+        </div>
+
+        <div class="filter-tabs" id="docFilters" role="group" aria-label="Фильтр образцов по типу организации"></div>
+        <div class="doc-grid" id="docGrid"></div>
+
+        <div class="docs-footer-bar">
+          <p class="docs-disclaimer">Образцы обезличены и носят демонстрационный характер. Реальный пакет разрабатывается по данным обследования вашего объекта и действующим редакциям нормативных актов РБ.</p>
+          <div class="docs-extra-actions">
+            <button type="button" class="btn btn-secondary btn-sm" data-open-doc="qual">
+              <svg class="icon" aria-hidden="true"><use href="#ic-doc"/></svg>
+              Квалификационная справка
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm" data-open-doc="checklist">
+              <svg class="icon" aria-hidden="true"><use href="#ic-doc"/></svg>
+              Чек-лист для завхоза
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS PROTOCOL -->
+    <section class="section section-dark" id="process" aria-labelledby="process-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="process-heading">Пять шагов до утверждённого пакета</h2>
+            <p class="section-lead">Вам не нужно разбираться в экологическом законодательстве. Нужен один ответственный сотрудник и 15–30 минут на сбор первичных документов по нашему чек-листу.</p>
+          </div>
+        </div>
+
+        <ol class="process-grid" style="list-style:none">
+          <li class="process-step">
+            <span class="process-num">01</span>
+            <h3>Сбор данных по чек-листу</h3>
+            <p>Накладные, договоры на вывоз, учёт ламп и техники — принимаем сканы, фотографии или выгрузки из 1С.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">02</span>
+            <h3>Обследование объекта</h3>
+            <p>Выезжаем на пищеблок, склад, в мастерские, на территорию и контейнерную площадку в согласованное время.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">03</span>
+            <h3>Разработка документации</h3>
+            <p>Проводим инвентаризацию, рассчитываем нормативы, составляем инструкцию, карту-схему и проекты приказов.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">04</span>
+            <h3>Проверка и подпись эколога</h3>
+            <p>Инженер-эколог сверяет коды классификатора, расчёты и подписывает комплект как разработчик.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">05</span>
+            <h3>Утверждение и направление</h3>
+            <p>Руководитель утверждает инструкцию; копия направляется в территориальный орган Минприроды.</p>
+          </li>
+        </ol>
+
+        <div class="process-bar">
+          <p class="process-time-note">Участие вашего сотрудника: 15–30 минут на передачу первички и 1–2 часа на обследование.</p>
+          <div class="process-actions">
+            <button type="button" class="btn btn-dark-primary btn-sm" data-open-doc="checklist">Открыть чек-лист документов</button>
+            <a class="btn btn-dark-ghost btn-sm" href="#docs">Смотреть образцы пакетов</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELF-CHECK CALCULATOR -->
+    <section class="section" id="check" aria-labelledby="check-heading">
+      <div class="wrap">
+        <div class="checker">
+          <div>
+            <h2 id="check-heading">Нужна ли вам инструкция — проверка за минуту</h2>
+            <p class="section-lead">Выберите параметры организации — покажем статус документации, особые требования и ориентир стоимости.</p>
+
+            <div class="checker-form">
+              <div class="field">
+                <label for="qYear">Когда утверждена действующая инструкция</label>
+                <select class="select" id="qYear">
+                  <option value="none">Инструкции нет или неизвестно</option>
+                  <option value="old">Утверждена в 2021 году или раньше</option>
+                  <option value="mid">Утверждена в 2022 году</option>
+                  <option value="new">Утверждена в 2023–2026 годах</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="qCount">Количество объектов</label>
+                <select class="select" id="qCount">
+                  <option value="1">1 объект</option>
+                  <option value="5">2–10 объектов</option>
+                  <option value="20">11–30 объектов</option>
+                  <option value="50">более 30 объектов</option>
+                </select>
+              </div>
+
+              <label class="check-row" for="qFood">
+                <input type="checkbox" id="qFood">
+                <span>Есть пищеблок, столовая или кафе</span>
+              </label>
+
+              <label class="check-row" for="qCar">
+                <input type="checkbox" id="qCar">
+                <span>Есть собственный автотранспорт на балансе</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="checker-output" id="checkerOutput" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WASTE CLASSIFIER EXCERPT -->
+    <section class="section section-white" id="waste" aria-labelledby="waste-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="waste-heading">Типичные отходы, которые входят в инструкцию</h2>
+            <p class="section-lead">Выдержка из Классификатора отходов Республики Беларусь для бюджетных учреждений, столовых, гаражей и предприятий.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="classifier-table">
+            <thead>
+              <tr>
+                <th scope="col">Код</th>
+                <th scope="col">Вид отхода</th>
+                <th scope="col">Класс опасности</th>
+                <th scope="col">Где образуется</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="waste-code">3532604</td>
+                <td>Ртутные и люминесцентные лампы отработанные</td>
+                <td><span class="hazard-tag is-high">1-й класс</span></td>
+                <td>Учебные классы, кабинеты, коридоры, цеха</td>
+              </tr>
+              <tr>
+                <td class="waste-code">3532507</td>
+                <td>Отработанные элементы питания (батарейки)</td>
+                <td><span class="hazard-tag">3-й класс</span></td>
+                <td>Кабинеты, хозяйственные и офисные помещения</td>
+              </tr>
+              <tr>
+                <td class="waste-code">3990100</td>
+                <td>Списанная оргтехника и электронное оборудование</td>
+                <td><span class="hazard-tag">3-й класс</span></td>
+                <td>Администрация, классы информатики, бухгалтерия</td>
+              </tr>
+              <tr>
+                <td class="waste-code">9120300</td>
+                <td>Пищевые отходы кухонь и столовых</td>
+                <td><span class="hazard-tag">4-й класс</span></td>
+                <td>Пищеблок, столовая, буфет, кафе</td>
+              </tr>
+              <tr>
+                <td class="waste-code">9120800</td>
+                <td>Уличный и дворовый смёт</td>
+                <td><span class="hazard-tag">4-й класс</span></td>
+                <td>Уборка прилегающей территории</td>
+              </tr>
+              <tr>
+                <td class="waste-code">1870601</td>
+                <td>Макулатура (бумага и картон)</td>
+                <td><span class="hazard-tag is-safe">Неопасные</span></td>
+                <td>Администрация, архив, библиотека, склад</td>
+              </tr>
+              <tr>
+                <td class="waste-code">5410201</td>
+                <td>Отработанные моторные масла и масляные фильтры</td>
+                <td><span class="hazard-tag">3-й класс</span></td>
+                <td>Собственный автотранспорт, посты ТО</td>
+              </tr>
+              <tr>
+                <td class="waste-code">5750400</td>
+                <td>Отработанные шины и свинцовые аккумуляторы</td>
+                <td><span class="hazard-tag">2–4-й класс</span></td>
+                <td>Гараж, автохозяйство, СТО</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-caption-note">Коды приведены справочно. Точный перечень, коды и классы опасности определяются по результатам обследования объекта и действующей редакции Классификатора отходов РБ.</p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="prices" aria-labelledby="prices-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="prices-heading">Ориентиры стоимости</h2>
+            <p class="section-lead">Итоговая цена зависит от числа объектов, состава отходов и наличия транспорта. Пришлите список объектов — подготовим расчёт в течение рабочего дня.</p>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="price-card-top">
+              <div class="price-audience">Школа, сад, офис, кафе, СТО</div>
+              <h3>Одно учреждение</h3>
+              <div class="price-amount">от 450 <small>BYN</small></div>
+            </div>
+            <div class="price-card-body">
+              <ul class="price-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Обследование и инвентаризация</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Расчёт нормативов и инструкция</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Карта-схема и проекты приказов</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Подпись инженера-эколога</span></li>
+              </ul>
+              <button type="button" class="btn btn-secondary" data-prefill-count="1 объект" data-prefill-msg="Инструкция для одного учреждения">Рассчитать стоимость</button>
+            </div>
+          </article>
+
+          <article class="price-card price-card-featured">
+            <div class="price-card-top">
+              <div class="price-audience">Для центров обеспечения района</div>
+              <h3>Пакет для района</h3>
+              <div class="price-amount">по расчёту <small>за объект</small></div>
+            </div>
+            <div class="price-card-body">
+              <ul class="price-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Единый договор и общий график</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Отдельный пакет на каждый объект</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Реестр статусов по учреждениям</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Поэтапная сдача и оплата</span></li>
+              </ul>
+              <button type="button" class="btn btn-primary" data-prefill-count="более 30 объектов" data-prefill-msg="Пакет для учреждений района (центр обеспечения)">Получить КП на район</button>
+            </div>
+          </article>
+
+          <article class="price-card">
+            <div class="price-card-top">
+              <div class="price-audience">Если нет эколога в штате</div>
+              <h3>Экосопровождение</h3>
+              <div class="price-amount">от 120 <small>BYN/мес.</small></div>
+            </div>
+            <div class="price-card-body">
+              <ul class="price-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Календарь сроков и напоминания</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Ведение книг учёта ПОД-9, ПОД-10</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Ответы на запросы органов</span></li>
+                <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg><span>Подготовка к проверкам</span></li>
+              </ul>
+              <button type="button" class="btn btn-secondary" data-prefill-count="1 объект" data-prefill-msg="Экосопровождение (абонемент)">Уточнить тарифы</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALISTS -->
+    <section class="section section-white" id="team" aria-labelledby="team-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="team-heading">Документы подписывают инженеры-экологи</h2>
+            <p class="section-lead">37 лет совокупного опыта в охране окружающей среды: промышленные предприятия, бюджетная сфера, автотранспорт и взаимодействие с природоохранными органами.</p>
+          </div>
+        </div>
+
+        <div class="roster-grid">
+          <article class="specialist">
+            <div class="specialist-head">
+              <div class="specialist-seal" aria-hidden="true">ИС</div>
+              <span class="specialist-exp">Стаж 18 лет</span>
+            </div>
+            <h3>Ирина Савчук</h3>
+            <div class="specialist-role">Ведущий инженер-эколог</div>
+            <p class="specialist-bio">Высшее образование по специальности «Охрана окружающей среды и рациональное использование природных ресурсов», БГТУ. Руководила природоохранной службой машиностроительного предприятия.</p>
+            <p class="specialist-focus">Направления: инструкции по отходам · разрешения · сопровождение проверок</p>
+          </article>
+
+          <article class="specialist">
+            <div class="specialist-head">
+              <div class="specialist-seal" aria-hidden="true">ДЛ</div>
+              <span class="specialist-exp">Стаж 13 лет</span>
+            </div>
+            <h3>Дмитрий Лисовский</h3>
+            <div class="specialist-role">Инженер-эколог</div>
+            <p class="specialist-bio">Инженер-эколог, БНТУ. Специализируется на нормировании и учёте отходов в бюджетных учреждениях и на предприятиях транспорта, расчёте нормативов и экологического налога.</p>
+            <p class="specialist-focus">Направления: нормативы · транспорт и СТО · экологический налог</p>
+          </article>
+
+          <article class="specialist">
+            <div class="specialist-head">
+              <div class="specialist-seal" aria-hidden="true">АК</div>
+              <span class="specialist-exp">Стаж 6 лет</span>
+            </div>
+            <h3>Анна Ковалёва</h3>
+            <div class="specialist-role">Инженер-эколог</div>
+            <p class="specialist-bio">Магистр экологии, МГЭИ им. А. Д. Сахарова БГУ. Проводит обследование объектов, инвентаризацию отходов, постановку учёта по формам ПОД и подготовку статистической отчётности.</p>
+            <p class="specialist-focus">Направления: инвентаризация · учёт ПОД-9/10 · отчёт 1-отходы</p>
+          </article>
+        </div>
+
+        <p class="roster-note">Копии дипломов и удостоверений о повышении квалификации предоставляются заказчику по запросу и прикладываются к предложению на закупку.</p>
+      </div>
+    </section>
+
+    <!-- FOR TENDER COMMISSIONS -->
+    <section class="section section-tinted" id="tender" aria-labelledby="tender-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <h2 id="tender-heading">Сведения об исполнителе для тендерных комиссий</h2>
+            <p class="section-lead">ЭкоНорма — направление экологического консалтинга ООО «Нестудио». Договор заключается с юридическим лицом, а документацию разрабатывают и подписывают инженеры-экологи.</p>
+          </div>
+        </div>
+
+        <div class="tender-grid">
+          <div class="requisites-card">
+            <div class="requisites-head">
+              <h3>Карточка участника закупки</h3>
+              <span class="mono" style="font-size:13px;color:var(--ink-muted)">РБ · ЭТП с ЭЦП</span>
+            </div>
+
+            <dl class="requisites-list">
+              <dt>Исполнитель</dt>
+              <dd>ООО «Нестудио»</dd>
+
+              <dt>УНП</dt>
+              <dd class="mono">
+                194055643
+                <button type="button" class="copy-inline" data-copy="194055643" data-copy-label="УНП 194055643 скопирован">Копировать</button>
+              </dd>
+
+              <dt>Регистрация</dt>
+              <dd>Минский горисполком</dd>
+
+              <dt>Юридический адрес</dt>
+              <dd>220117, г. Минск, пр-т Газеты Звязда, 16, пом. 26</dd>
+
+              <dt>Банк</dt>
+              <dd>ЗАО «БСБ Банк», <span class="mono">BIC UNBSBY2X</span></dd>
+
+              <dt>Р/с BYN</dt>
+              <dd class="mono">
+                BY97 UNBS 3012 2628 3000 0000 0933
+                <button type="button" class="copy-inline" data-copy="BY97UNBS30122628300000000933" data-copy-label="Расчётный счёт скопирован">Копировать</button>
+              </dd>
+
+              <dt>Директор</dt>
+              <dd>Нестерук Сергей Фёдорович</dd>
+            </dl>
+
+            <div class="requisites-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-open-doc="qual">
+                <svg class="icon" aria-hidden="true"><use href="#ic-doc"/></svg>
+                Квалификационная справка
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="copyAllRequisites">
+                <svg class="icon" aria-hidden="true"><use href="#ic-copy"/></svg>
+                Скопировать реквизиты
+              </button>
+            </div>
+
+            <img class="requisites-stamp" src="assets/img/stamp.png" alt="" width="100" height="100" loading="lazy">
+          </div>
+
+          <ul class="principles-list">
+            <li>
+              <h3>Квалификационная справка к каждой заявке</h3>
+              <p>Сведения о специалистах, профильном образовании и порядке исполнения прикладываем к предложениям на goszakupki.by и icetrade.by.</p>
+            </li>
+            <li>
+              <h3>Поэтапная сдача и оплата</h3>
+              <p>При пакетной работе сдаём инструкции партиями по мере готовности с поэтапным подписанием актов выполненных работ.</p>
+            </li>
+            <li>
+              <h3>Исправление замечаний за наш счёт</h3>
+              <p>Любые замечания руководителя организации или территориального органа Минприроды к нашим документам устраняем бесплатно.</p>
+            </li>
+            <li>
+              <h3>Честное разделение сроков</h3>
+              <p>Срок разработки фиксируется в договоре отдельно от времени рассмотрения документов в уполномоченных органах.</p>
+            </li>
+          </ul>
+        </div>
+
+        <dl class="law-strip">
+          <div class="law-item">
+            <dt>Закон № 271-З</dt>
+            <dd>«Об обращении с отходами»</dd>
+          </div>
+          <div class="law-item">
+            <dt>Закон об охране среды</dt>
+            <dd>«Об охране окружающей среды»</dd>
+          </div>
+          <div class="law-item">
+            <dt>Постановление Минприроды</dt>
+            <dd>Порядок разработки и утверждения инструкций</dd>
+          </div>
+          <div class="law-item">
+            <dt>Классификатор отходов</dt>
+            <dd>Коды и классы опасности отходов РБ</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-white" id="faq" aria-labelledby="faq-heading">
+      <div class="wrap faq-grid">
+        <div class="faq-aside">
+          <h2 id="faq-heading">Частые вопросы</h2>
+          <p class="section-lead">Если вашей ситуации нет в списке, инженер-эколог ответит в рабочее время по телефону или почте.</p>
+          <div class="faq-contacts">
+            <a href="tel:+375447138869"><svg class="icon" aria-hidden="true"><use href="#ic-phone"/></svg><span>+375 44 713-88-69</span></a>
+            <a href="mailto:info@econorma.by"><svg class="icon" aria-hidden="true"><use href="#ic-mail"/></svg><span>info@econorma.by</span></a>
+            <span><svg class="icon" aria-hidden="true"><use href="#ic-clock"/></svg><span>Пн–Пт, 9:00–18:00</span></span>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Нужна ли инструкция детскому саду или школе?</summary>
+            <div class="faq-answer">Да. Если в учреждении образуются отходы производства — ртутные лампы, оргтехника, отходы пищеблока, смёт с территории, металлолом, — законодательство требует утверждённую инструкцию и ведение учёта отходов.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Кто утверждает инструкцию и куда она направляется?</summary>
+            <div class="faq-answer">Инструкцию утверждает руководитель организации-природопользователя. Копия утверждённой инструкции направляется в территориальный орган Минприроды (для Минска — Минский городской комитет природных ресурсов и охраны окружающей среды).</div>
+          </details>
+          <details class="faq-item">
+            <summary>Сколько времени займёт подготовка у наших сотрудников?</summary>
+            <div class="faq-answer">Обычно 15–30 минут на сбор первичных документов по нашему чек-листу (подходят сканы, фотографии и выгрузки из 1С) и 1–2 часа на совместное обследование объекта при выезде специалиста.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли разработать инструкции сразу для всех учреждений района?</summary>
+            <div class="faq-answer">Да. Работаем с центрами по обеспечению деятельности бюджетных организаций: заключаем единый договор, согласуем график выездов, готовим отдельный пакет на каждое учреждение, ведём реестр статусов и сдаём работы поэтапно.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Почему договор заключается с ООО «Нестудио»?</summary>
+            <div class="faq-answer">ЭкоНорма — профильное экологическое направление ООО «Нестудио». Сами документы разрабатывают, проверяют и подписывают дипломированные инженеры-экологи, а ООО «Нестудио» несёт ответственность по договору за сроки и качество.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Как вы обрабатываете персональные данные из формы на сайте?</summary>
+            <div class="faq-answer">Исключительно для ответа на запрос и подготовки коммерческого предложения, на основании согласия и в соответствии с Законом РБ от 07.05.2021 № 99-З. Подробно — в <a href="politika.html">Политике обработки персональных данных</a>.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & LEAD FORM -->
+    <section class="section section-dark" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contact-heading">Рассчитаем стоимость за рабочий день</h2>
+          <p class="section-lead">Пришлите список объектов или ссылку на процедуру закупки — направим коммерческое предложение с графиком работ и квалификационной справкой.</p>
+
+          <div class="contact-list">
+            <a href="tel:+375447138869">
+              <svg class="icon" aria-hidden="true"><use href="#ic-phone"/></svg>
+              <span>+375 44 713-88-69</span>
+            </a>
+            <a href="mailto:info@econorma.by">
+              <svg class="icon" aria-hidden="true"><use href="#ic-mail"/></svg>
+              <span>info@econorma.by</span>
+            </a>
+            <span>
+              <svg class="icon" aria-hidden="true"><use href="#ic-clock"/></svg>
+              <span>Пн–Пт, 9:00–18:00</span>
+            </span>
+            <span>
+              <svg class="icon" aria-hidden="true"><use href="#ic-pin"/></svg>
+              <span>Минск и вся Республика Беларусь</span>
+            </span>
+          </div>
+        </div>
+
+        <form class="lead-form" id="leadForm" novalidate>
+          <div class="field">
+            <label for="fOrg">Организация</label>
+            <input class="input" id="fOrg" name="org" type="text" autocomplete="organization" placeholder="Например: ГУО «Средняя школа № 12 г. Минска»…" required>
+          </div>
+
+          <div class="form-row-2">
+            <div class="field">
+              <label for="fContact">Телефон или e-mail</label>
+              <input class="input" id="fContact" name="contact" type="text" autocomplete="tel" spellcheck="false" placeholder="+375 29 … или почта…" required>
+            </div>
+
+            <div class="field">
+              <label for="fObjects">Количество объектов</label>
+              <select class="select" id="fObjects" name="objects">
+                <option value="1 объект">1 объект</option>
+                <option value="2–10 объектов">2–10 объектов</option>
+                <option value="11–30 объектов">11–30 объектов</option>
+                <option value="более 30 объектов">более 30 объектов</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="fComment">Что нужно сделать или ссылка на закупку</label>
+            <textarea class="textarea" id="fComment" name="comment" rows="3" placeholder="Продление инструкции, пакет для района, номер процедуры на goszakupki.by…"></textarea>
+          </div>
+
+          <label class="form-consent" for="fConsent">
+            <input type="checkbox" id="fConsent" name="consent" required>
+            <span>Даю <a href="soglasie.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и подтверждаю ознакомление с <a href="politika.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a></span>
+          </label>
+
+          <div class="form-error" id="formError" role="alert"></div>
+
+          <button class="btn btn-primary" type="submit">Отправить запрос на расчёт</button>
+          <p class="form-footnote">Без отметки о согласии запрос не отправляется. Согласие можно отозвать в любой момент письмом на info@econorma.by.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="footer-brand" href="#top" translate="no">
+        <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true"><use href="#econorma-mark"/></svg>
+        <span>ЭкоНорма</span>
+      </a>
+      <span>© 2026 ЭкоНорма · ООО «Нестудио», УНП 194055643 · 220117, г. Минск, пр-т Газеты Звязда, 16, пом. 26</span>
+      <div class="footer-links">
+        <a href="politika.html">Политика обработки ПД</a>
+        <a href="soglasie.html">Согласие на обработку ПД</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Full-screen A4 Document Reader Modal -->
+  <div class="modal" id="docModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-bar">
+      <button type="button" class="modal-icon-btn" id="modalPrev" aria-label="Предыдущий документ">
+        <svg class="icon" aria-hidden="true"><use href="#ic-left"/></svg>
+      </button>
+      <div class="modal-meta">
+        <small id="modalType"></small>
+        <strong id="modalTitle"></strong>
+      </div>
+      <button type="button" class="btn btn-dark-ghost btn-sm btn-hide-sm" id="modalPrint">
+        <svg class="icon" aria-hidden="true"><use href="#ic-print"/></svg>
+        Печать / PDF
+      </button>
+      <button type="button" class="btn btn-dark-primary btn-sm btn-hide-sm" id="modalCta">Запросить такой пакет</button>
+      <button type="button" class="modal-icon-btn" id="modalNext" aria-label="Следующий документ">
+        <svg class="icon" aria-hidden="true"><use href="#ic-right"/></svg>
+      </button>
+      <button type="button" class="modal-icon-btn" id="modalClose" aria-label="Закрыть просмотр">
+        <svg class="icon" aria-hidden="true"><use href="#ic-close"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+
+  <div class="status-live" id="statusLive" role="status" aria-live="polite"></div>
+
+  <script src="js/docs-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

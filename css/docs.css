@@ -1,0 +1,271 @@
+/* Authentic A4 regulatory document sheets (used in hero preview, sample gallery, and reader modal) */
+
+.doc-paper {
+  width: 794px;
+  background-color: #FFFFFF;
+  color: #1A1F1D;
+  padding: 64px 72px 56px;
+  font-family: var(--font-doc);
+  font-size: 14.5px;
+  line-height: 1.52;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='380'%3E%3Ctext x='48' y='210' transform='rotate(-32 190 190)' font-family='Arial, sans-serif' font-weight='700' font-size='40' letter-spacing='4' fill='%23146B45' fill-opacity='.045'%3E%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%95%D0%A6%3C/text%3E%3C/svg%3E");
+}
+
+.doc-paper h1.d-title {
+  font-family: var(--font-doc);
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+  margin: 28px 0 6px;
+  color: #111815;
+}
+
+.doc-paper .d-sub {
+  text-align: center;
+  font-style: italic;
+  color: #3E4A45;
+  margin-bottom: 20px;
+}
+
+.doc-paper h2 {
+  font-family: var(--font-doc);
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+  margin: 22px 0 8px;
+  color: #111815;
+}
+
+.doc-paper h3 {
+  font-family: var(--font-doc);
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 14px 0 4px;
+  color: #111815;
+}
+
+.doc-paper p {
+  margin: 6px 0;
+  text-align: justify;
+  max-width: none;
+}
+
+.doc-paper ul,
+.doc-paper ol {
+  margin: 6px 0 8px 22px;
+}
+
+.doc-paper li {
+  margin-bottom: 4px;
+}
+
+.d-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.d-org {
+  max-width: 54%;
+  font-weight: 700;
+}
+
+.d-appr {
+  text-align: left;
+  min-width: 224px;
+}
+
+.d-tab {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+  margin: 10px 0 12px;
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+}
+
+.d-tab th,
+.d-tab td {
+  border: 1px solid #6E7773;
+  padding: 5px 6px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.d-tab th {
+  background-color: #EEF2EF;
+  font-weight: 600;
+  color: #11201A;
+}
+
+.d-kv {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin: 8px 0 12px;
+}
+
+.d-kv td {
+  border-bottom: 1px dotted #9BA6A1;
+  padding: 5px 4px;
+  vertical-align: top;
+}
+
+.d-kv td:first-child {
+  width: 44%;
+  color: #414E48;
+}
+
+.d-formula {
+  background-color: #F2F6F3;
+  border: 1px solid #D3DFD8;
+  padding: 8px 12px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  text-align: left !important;
+}
+
+.d-small {
+  font-size: 12px;
+  color: #4B5751;
+}
+
+.d-map {
+  width: 100%;
+  border: 1px solid #BFCAC4;
+  margin: 8px 0;
+  background-color: #FFFFFF;
+  display: block;
+}
+
+.d-sign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid #D4DDD8;
+  font-size: 13px;
+}
+
+.d-sign p {
+  text-align: left;
+  margin: 5px 0;
+}
+
+.d-stamp {
+  width: 168px;
+  height: auto;
+  mix-blend-mode: multiply;
+  transform: rotate(-8deg);
+  flex: none;
+}
+
+.d-foot {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #5C6862;
+  border-top: 1px solid #DCE3DF;
+  padding-top: 8px;
+  font-family: var(--font-sans);
+  text-align: left !important;
+}
+
+.d-status {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.d-status.ok {
+  background-color: var(--status-ok-bg);
+  color: var(--status-ok-ink);
+}
+
+.d-status.mid {
+  background-color: var(--status-info-bg);
+  color: var(--status-info-ink);
+}
+
+.d-status.wait {
+  background-color: var(--status-warn-bg);
+  color: var(--status-warn-ink);
+}
+
+.d-check-list {
+  list-style: none;
+  margin: 8px 0 14px 0 !important;
+  padding: 0;
+}
+
+.d-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px dotted #C6D0CB;
+}
+
+.d-check-box {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #2A3832;
+  border-radius: 2px;
+  margin-top: 3px;
+  flex: none;
+}
+
+/* Clean print output when user prints from the document modal */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .modal.is-open,
+  .modal.is-open .modal-body,
+  .modal.is-open .modal-scale,
+  .modal.is-open .doc-paper,
+  .modal.is-open .doc-paper * {
+    visibility: visible;
+  }
+
+  .modal.is-open {
+    position: static;
+    background: #FFFFFF;
+    display: block;
+  }
+
+  .modal-bar {
+    display: none !important;
+  }
+
+  .modal-body {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .modal-scale {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .doc-paper {
+    transform: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    padding: 12mm 15mm !important;
+  }
+}

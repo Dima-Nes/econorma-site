@@ -1,0 +1,23 @@
+# ЭкоНорма — настройки Apache для hoster.by
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+# Отключаем просмотр списка файлов в папках
+Options -Indexes
+
+# Кэширование статики (шрифты, стили, скрипты, изображения)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
+
+# После выпуска SSL-сертификата Let's Encrypt в cPanel можно раскомментировать редирект на HTTPS:
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} !=on
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
